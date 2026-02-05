@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="gzgpJexar6EbSS0GF7kfHgac6liFjo9K0yV11kzihPg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScaleBot @ CVPR 2026</title>
+    <title>Data-Centric Robotics @ RSS 2026</title>
     <style>
         body {
             margin: 0;
@@ -63,36 +62,6 @@
             padding: 30px 20px;
             color: #888;
             font-size: 0.85rem;
-        }
-
-        #sponsors {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(22, 27, 34, 0.85);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        .sponsor-logos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .sponsor-logo {
-            max-width: 200px;
-            max-height: 100px;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .sponsor-logo:hover {
-            transform: scale(1.1);
         }
 
         /* Navigation */
@@ -167,6 +136,10 @@
             margin-left: 25px;
             margin-right: 25px;
             margin-bottom: 20px;
+        }
+
+        .submission-content li {
+            margin-bottom: 10px;
         }
 
         .people {
@@ -266,7 +239,6 @@
             border: 1px solid rgba(40, 137, 248, 0.2);
         }
 
-
         .timeline-item {
             position: relative;
             padding-left: 55px;
@@ -277,7 +249,6 @@
         .timeline-item:last-child {
             margin-bottom: 10px;
         }
-
 
         .timeline-item:not(:last-child)::before {
             content: '';
@@ -382,7 +353,7 @@
 <body>
 
     <nav>
-        <div class="nav-brand">ScaleBot Workshop @ CVPR 2026</div>
+        <div class="nav-brand">Data-Centric Robotics Workshop @ RSS 2026</div>
         <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
         <div class="nav-links">
             <a href="#overview">Overview</a>
@@ -395,69 +366,99 @@
     </nav>
 
     <header>
-        <img src="images/placeholder.png" alt="Placeholder Logo" class="logo">
+        <!-- Placeholder for Logo, maybe replace 'images/placeholder.png' with a real one later -->
+        <img src="images/placeholder.png" alt="Workshop Logo" class="logo">
         <h1 style="font-size: 40px; font-weight: 700; margin-bottom: 0; margin-top: 50px;">
-            Placeholder
+            Data-Centric Robotics
         </h1>
         <h1 style="margin-top: 5px;">
-            Placeholder
+            What Data Do Robots Really Need?
         </h1>
-        <p style="font-size: 30px;">Placeholder</p>
+        <p style="font-size: 30px;">RSS 2026 Workshop</p>
     </header>
 
     <section id="overview" class="overview">
         <h2>Overview</h2>
-        <p>Placeholder</p>
+        <p>
+            Natural language processing and computer vision have recently undergone a paradigm shift toward data-driven
+            intelligence, highlighted by the success of large language and vision models trained on massive internet-scale
+            datasets. Robotics is at an analogous inflection point: progress in robot learning is increasingly
+            bottlenecked not only by model architectures and compute, but by the availability, quality, diversity, and
+            structure of robot data. Yet unlike the digital world, the physical world still lacks an “Internet for
+            Robots”—a shared, scalable ecosystem of data, tooling, and evaluation that can reliably support
+            general-purpose physical intelligence.
+        </p>
+        <p style="margin-top: 15px;">
+            This workshop will bring together researchers and practitioners to examine a core question: <strong>What kinds
+            of data matter most for training robots, and at what scale is data “enough”?</strong> We will focus on the
+            end-to-end pipeline—data sources, collection paradigms, scaling laws, dataset composition, curation and
+            weighting, evaluation protocols, and post-deployment data flywheels—highlighting both complementary
+            perspectives and unresolved tensions. The workshop is designed to be highly discussion-driven, using short
+            talks and panels to identify practical bottlenecks and propose actionable research directions.
+        </p>
     </section>
 
     <section id="callforpapers">
         <h2>Call for Papers</h2>
         <div class="submission-content">
             <h3>Topics of Interest</h3>
-            <p>Placeholder</p>
+            <p>We welcome submissions related to the following themes:</p>
             <ul>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
+                <li><strong>Data Sources and Philosophies:</strong> Web data (semantic knowledge) vs. Simulation data
+                    (scalable) vs. Real-world interaction data (grounding). Combining diverse data sources in unified
+                    pipelines.</li>
+                <li><strong>Scalability vs. Quality in Data Collection:</strong> Balancing high-fidelity teleoperation
+                    with scalable alternatives like human videos or low-cost wearable devices. Weighting data sources
+                    during training.</li>
+                <li><strong>Closing the Loop - Learning After Deployment:</strong> Leveraging experiential data,
+                    reinforcement learning, and online adaptation to correct failures and build robust data flywheels
+                    post-deployment.</li>
+                <li><strong>Data Evaluation, Analysis, and Interpretability:</strong> Defining and measuring data quality.
+                    Systematic selection, filtering, and weighting of data. Benchmarks for data curation and
+                    understanding data influence on model behavior.</li>
             </ul>
 
             <h3>Submission Guidelines</h3>
             <ul>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
+                <li>All papers must be submitted through our OpenReview portal (Link TBD).</li>
+                <li>Submissions must strictly adhere to the <a href="#" style="color:#2889f8;">RSS 2026 Author
+                        Guidelines</a> in terms of potential ethics issues and potential risks of negative social
+                    impacts.</li>
+                <li>To facilitate double-blind review, all manuscripts must be <strong>fully anonymized</strong>.</li>
+                <li>All accepted papers are expected to be presented in person at the workshop.</li>
+                <li>Exceptional submissions will be considered for Best Paper Award and Spotlight Presentations.</li>
             </ul>
 
             <h3>Submission Track 1: Proceedings Track</h3>
             <div class="track-container">
                 <div class="track-content">
-                    <p>Placeholder</p>
-                    <a href="#" class="btn">Placeholder</a>
+                    <p>
+                        Submissions to the Proceedings Track must present original, unpublished research. Manuscripts
+                        should typically be <strong>4-8 pages</strong> (format TBD) using the RSS 2026 submission template.
+                        Accepted papers in this track may be formally published in the Workshop Proceedings (subject to confirmation).
+                    </p>
+                    <a href="#" class="btn">Submission Portal: TBD</a>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Placeholder</div>
-                            <div class="timeline-label">Placeholder</div>
+                            <div class="timeline-date">TBD</div>
+                            <div class="timeline-label">Submission Deadline</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Placeholder</div>
-                            <div class="timeline-label">Placeholder</div>
+                            <div class="timeline-date">TBD</div>
+                            <div class="timeline-label">Notification to Authors</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Placeholder</div>
-                            <div class="timeline-label">Placeholder</div>
+                            <div class="timeline-date">TBD</div>
+                            <div class="timeline-label">Camera-ready Deadline</div>
                         </div>
                     </div>
                 </div>
@@ -468,37 +469,42 @@
             <h3>Submission Track 2: Non-Proceedings Track</h3>
             <div class="track-container">
                 <div class="track-content">
-                    <p>Placeholder</p>
-                    <p>Placeholder</p>
+                    <p>
+                        The Non-Proceedings Track offers a flexible, <strong>non-archival</strong> venue for sharing a
+                        broad range of contributions. This track allows authors to present and promote their work without
+                        restrictive publishing constraints.
+                    </p>
+                    <p>
+                        We warmly welcome:
+                    </p>
                     <ul>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
+                        <li>Works-in-progress and preliminary results</li>
+                        <li>Open Datasets and Technical Reports</li>
+                        <li>Recent work submitted or published within the last year</li>
+                        <li>Position papers and conceptual frameworks</li>
                     </ul>
-                    <a href="#" class="btn">Placeholder</a>
+                    <a href="#" class="btn">Submission Portal: TBD</a>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Placeholder</div>
-                            <div class="timeline-label">Placeholder</div>
+                            <div class="timeline-date">TBD</div>
+                            <div class="timeline-label">Submission Deadline</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Placeholder</div>
-                            <div class="timeline-label">Placeholder</div>
+                            <div class="timeline-date">TBD</div>
+                            <div class="timeline-label">Notification to Authors</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">Placeholder</div>
-                            <div class="timeline-label">Placeholder</div>
+                            <div class="timeline-date">TBD</div>
+                            <div class="timeline-label">Camera-ready Deadline</div>
                         </div>
                     </div>
                 </div>
@@ -506,37 +512,37 @@
         </div>
     </section>
 
-
     <section id="schedule">
         <h2>Schedule</h2>
-        <p style="text-align: center;">Placeholder</p>
+        <p style="text-align: center;">To be updated.</p>
     </section>
 
     <section id="speakers">
         <h2>Speakers</h2>
         <div class="people">
+            <!-- Placeholders as requested -->
             <div class="speaker">
                 <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
+                    <img src="images/placeholder.png" alt="Speaker Placeholder">
+                    <p><strong>To Be Announced</strong><br>Affiliation</p>
                 </a>
             </div>
             <div class="speaker">
                 <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
+                    <img src="images/placeholder.png" alt="Speaker Placeholder">
+                    <p><strong>To Be Announced</strong><br>Affiliation</p>
                 </a>
             </div>
             <div class="speaker">
                 <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
+                    <img src="images/placeholder.png" alt="Speaker Placeholder">
+                    <p><strong>To Be Announced</strong><br>Affiliation</p>
                 </a>
             </div>
             <div class="speaker">
                 <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
+                    <img src="images/placeholder.png" alt="Speaker Placeholder">
+                    <p><strong>To Be Announced</strong><br>Affiliation</p>
                 </a>
             </div>
         </div>
@@ -545,76 +551,29 @@
     <section id="organizers">
         <h2>Organizers</h2>
         <div class="people">
+            <!-- Placeholders as requested -->
             <div class="organizer">
                 <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
+                    <img src="images/placeholder.png" alt="Organizer Placeholder">
+                    <p><strong>To Be Announced</strong><br>Affiliation</p>
                 </a>
             </div>
             <div class="organizer">
                 <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
+                    <img src="images/placeholder.png" alt="Organizer Placeholder">
+                    <p><strong>To Be Announced</strong><br>Affiliation</p>
                 </a>
             </div>
             <div class="organizer">
                 <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
+                    <img src="images/placeholder.png" alt="Organizer Placeholder">
+                    <p><strong>To Be Announced</strong><br>Affiliation</p>
                 </a>
             </div>
             <div class="organizer">
                 <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
-                </a>
-            </div>
-            <div class="organizer">
-                <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
-                </a>
-            </div>
-            <div class="organizer">
-                <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
-                </a>
-            </div>
-            <div class="organizer">
-                <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
-                </a>
-            </div>
-            <div class="organizer">
-                <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
-                </a>
-            </div>
-            <div class="organizer">
-                <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
-                </a>
-            </div>
-            <div class="organizer">
-                <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
-                </a>
-            </div>
-            <div class="organizer">
-                <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
-                </a>
-            </div>
-            <div class="organizer">
-                <a href="#" target="_blank">
-                    <img src="images/placeholder.png" alt="Placeholder">
-                    <p><strong>Placeholder</strong><br>Placeholder</p>
+                    <img src="images/placeholder.png" alt="Organizer Placeholder">
+                    <p><strong>To Be Announced</strong><br>Affiliation</p>
                 </a>
             </div>
         </div>
@@ -622,25 +581,17 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p style="text-align:center; margin-top:20px;">Contact us at: <a href="mailto:scalebot@googlegroups.com"
-                style="color:#58a6ff;">scalebot@googlegroups.com</a></p>
+        <p style="text-align:center; margin-top:20px;">TBD</p>
     </section>
 
-    <!-- <section id="sponsors">
-        <h2>Sponsors</h2>
-        <div class="sponsor-logos">
-        </div>
-    </section> -->
-
     <footer>
-        &copy; ScaleBot Workshop @ CVPR 2026
+        &copy; Data-Centric Robotics Workshop @ RSS 2026
     </footer>
 
     <script>
         function toggleMenu() {
             document.querySelector('.nav-links').classList.toggle('active');
         }
-
     </script>
 
 </body>
