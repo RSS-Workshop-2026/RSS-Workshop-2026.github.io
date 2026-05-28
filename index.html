@@ -279,6 +279,61 @@
             margin-bottom: 5px;
         }
 
+        .speaker-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .speaker-card {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            padding: 20px;
+            border: 1px solid rgba(140, 27, 27, 0.1);
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(140, 27, 27, 0.06);
+        }
+
+        .speaker-photo {
+            flex: 0 0 auto;
+            display: inline-flex;
+        }
+
+        .speaker-photo img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            background-color: #eee;
+        }
+
+        .speaker-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .speaker-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 6px;
+        }
+
+        .speaker-org {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .speaker-bio {
+            margin: 0;
+            color: var(--text-main);
+        }
+
         /* Buttons */
         .btn {
             display: inline-block;
@@ -300,6 +355,16 @@
             color: var(--primary-red);
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(140, 27, 27, 0.15);
+        }
+
+        .submission-portal {
+            margin-top: 20px;
+            padding: 12px 18px;
+            background-color: var(--accent-red);
+            color: #ffffff;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 6px;
         }
 
         /* Track & Timeline */
@@ -367,6 +432,31 @@
             color: var(--text-main);
             font-size: 0.95rem;
         }
+
+        .schedule-meta {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid rgba(140, 27, 27, 0.2);
+            padding: 18px 16px;
+            text-align: left;
+        }
+
+        .schedule-table th:first-child,
+        .schedule-table td:first-child {
+            width: 28%;
+        }
         
         /* Contact Section */
         #contact {
@@ -429,6 +519,16 @@
                 min-width: auto;
                 border-left: 2px solid rgba(140, 27, 27, 0.2);
                 margin-top: 0;
+            }
+
+            .speaker-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .speaker-info {
+                width: 100%;
             }
         }
     </style>
@@ -506,88 +606,41 @@
             <h3>Submission Guidelines</h3>
             <ul>
                 <li>All papers must be submitted through our <a href="#" class="link-text">OpenReview portal (Link TBD)</a>.</li>
-                <li>Submissions must strictly adhere to the <a href="#" class="link-text">RSS 2026 Author Guidelines</a> in terms of potential ethics issues and potential risks of negative social impacts.</li>
-                <li>To facilitate double-blind review, all manuscripts must be <strong>fully anonymized</strong>.</li>
+                <li>To facilitate double-blind review, all manuscripts must be fully anonymized.</li>
                 <li>All accepted papers are expected to be presented in person at the workshop.</li>
                 <li>Exceptional submissions will be considered for Best Paper Award and Spotlight Presentations.</li>
             </ul>
 
-            <h3>Submission Track 1: Proceedings Track</h3>
+            <h3>Submission Track</h3>
             <div class="track-container">
                 <div class="track-content">
                     <p>
-                        Submissions to the Proceedings Track must present original, unpublished research. Manuscripts
-                        should typically be <strong>4-8 pages</strong> (format TBD) using the RSS 2026 submission template.
-                        Accepted papers in this track may be formally published in the Workshop Proceedings (subject to confirmation).
+                        We welcome submissions spanning full papers, works-in-progress, open datasets, technical
+                        reports, recent work, and position papers, including novel methods, systems, datasets,
+                        evaluations, and perspectives that advance data-centric robotics.
                     </p>
-                    <a href="#" class="btn">Submission Portal: TBD</a>
+                    <div class="submission-portal">Submission Portal</div>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">TBD</div>
+                            <div class="timeline-date">June 17, 2026</div>
                             <div class="timeline-label">Submission Deadline</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">TBD</div>
-                            <div class="timeline-label">Notification to Authors</div>
+                            <div class="timeline-date">June 23, 2026</div>
+                            <div class="timeline-label">Notification of Acceptance</div>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <div class="timeline-date">TBD</div>
-                            <div class="timeline-label">Camera-ready Deadline</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <br>
-            <h3>Submission Track 2: Non-Proceedings Track</h3>
-            <div class="track-container">
-                <div class="track-content">
-                    <p>
-                        The Non-Proceedings Track offers a flexible, <strong>non-archival</strong> venue for sharing a
-                        broad range of contributions. This track allows authors to present and promote their work without
-                        restrictive publishing constraints.
-                    </p>
-                    <p>
-                        We warmly welcome:
-                    </p>
-                    <ul>
-                        <li>Works-in-progress and preliminary results</li>
-                        <li>Open Datasets and Technical Reports</li>
-                        <li>Recent work submitted or published within the last year</li>
-                        <li>Position papers and conceptual frameworks</li>
-                    </ul>
-                    <a href="#" class="btn">Submission Portal: TBD</a>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">TBD</div>
-                            <div class="timeline-label">Submission Deadline</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">TBD</div>
-                            <div class="timeline-label">Notification to Authors</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">TBD</div>
-                            <div class="timeline-label">Camera-ready Deadline</div>
+                            <div class="timeline-date">July 5, 2026</div>
+                            <div class="timeline-label">Camera-ready Papers Due</div>
                         </div>
                     </div>
                 </div>
@@ -597,35 +650,70 @@
 
     <section id="schedule">
         <h2>Schedule</h2>
-        <p style="text-align: center; color: var(--text-secondary);">To be updated.</p>
+        <p class="schedule-meta">Location: To be decided</p>
+        <p class="schedule-meta">Date: July 13th - July 17th</p>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+            </tbody>
+        </table>
     </section>
 
     <section id="speakers">
         <h2>Speakers</h2>
-        <div class="people">
-            <div class="speaker">
-                <a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">
-                    <img src="image/sergey.jpg" alt="Sergey Levine">
-                    <p><strong>Sergey Levine</strong><br><span style="color:var(--text-secondary)">UC Berkeley</span></p>
-                </a>
-            </div>
-            <div class="speaker">
-                <a href="https://groups.csail.mit.edu/locomotion/russt.html" target="_blank">
-                    <img src="image/russ.jpg" alt="Russ Tedrake">
-                    <p><strong>Russ Tedrake</strong><br><span style="color:var(--text-secondary)">MIT</span></p>
-                </a>
-            </div>
-            <div class="speaker">
-                <a href="https://shurans.github.io/" target="_blank">
-                    <img src="image/shuran.jpg" alt="Shuran Song">
-                    <p><strong>Shuran Song</strong><br><span style="color:var(--text-secondary)">Stanford University</span></p>
-                </a>
-            </div>
-            <div class="speaker">
-                <a href="https://cseweb.ucsd.edu/~haosu/" target="_blank">
+        <div class="speaker-list">
+            <div class="speaker-card">
+                <a class="speaker-photo" href="https://cseweb.ucsd.edu/~haosu/" target="_blank" rel="noopener">
                     <img src="image/hao.jpg" alt="Hao Su">
-                    <p><strong>Hao Su</strong><br><span style="color:var(--text-secondary)">UC San Diego</span></p>
                 </a>
+                <div class="speaker-info">
+                    <div class="speaker-name">Hao Su</div>
+                    <div class="speaker-org">Fudan University</div>
+                    <!-- <p class="speaker-bio"></p> -->
+                </div>
+            </div>
+            <div class="speaker-card">
+                <a class="speaker-photo" href="https://haozhi.io/" target="_blank" rel="noopener">
+                    <img src="image/haozhi.jpg" alt="Haozhi Qi">
+                </a>
+                <div class="speaker-info">
+                    <div class="speaker-name">Haozhi Qi</div>
+                    <div class="speaker-org">Amazon Frontier AI & Robotics (FAR)</div>
+                    <p class="speaker-bio">Haozhi Qi is a Member of Technical Staff at Amazon FAR and an incoming Assistant Professor at the University of Chicago. His research spans robotics and AI, with a particular focus on algorithms and systems for dexterous manipulation. He is a recipient of the Lotfi A. Zadeh Prize, was named an RSS Pioneer 2026, and received the EECS Evergreen Award for Excellence in Undergraduate Research Mentoring.</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <a class="speaker-photo" href="https://www.simarkareer.com/" target="_blank" rel="noopener">
+                    <img src="image/kareer.jpg" alt="Simar Kareer">
+                </a>
+                <div class="speaker-info">
+                    <div class="speaker-name">Simar Kareer</div>
+                    <div class="speaker-org">Georgia Tech</div>
+                    <!-- <p class="speaker-bio"></p> -->
+                </div>
+            </div>
+            <div class="speaker-card">
+                <a class="speaker-photo" href="https://abalakrishna123.github.io/" target="_blank" rel="noopener">
+                    <img src="image/ashwin.jpg" alt="Ashwin Balakrishna">
+                </a>
+                <div class="speaker-info">
+                    <div class="speaker-name">Ashwin Balakrishna</div>
+                    <div class="speaker-org">Google Deepmind</div>
+                    <!-- <p class="speaker-bio"></p> -->
+                </div>
             </div>
         </div>
     </section>
@@ -680,7 +768,7 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p style="text-align:center; margin-top:20px;">TBD</p>
+        <p style="text-align:center; margin-top:20px;">Contact us at: <a href="mailto:rssworkshop2026-official@outlook.com">rssworkshop2026-official@outlook.com</a></p>
     </section>
 
     <footer>
