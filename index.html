@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data-Centric Robotics @ RSS 2026</title>
     <style>
-        /* Color Variables for easy adjustment */
+        /* Color Variables - RSS 2026 Blue Theme */
         :root {
-            --primary-red: #8c1b1b;    /* OpenReview style deep red */
-            --accent-red: #c0392b;     /* Brighter red for highlights */
-            --light-red-bg: #f9f7f7;   /* Very subtle warm/reddish white background */
-            --card-bg: #ffffff;        /* Pure white for content cards */
-            --text-main: #2c3e50;      /* Dark gray for main text */
-            --text-secondary: #5d6d7e; /* Lighter gray for secondary text */
-            --border-color: #e6b0aa;   /* Light red border */
+            --primary-blue: #1e56a0;    /* RSS 2026 primary blue */
+            --accent-blue: #2874d6;     /* Brighter blue for highlights */
+            --light-blue-bg: #f5f8fc;   /* Very subtle blue-tinted background */
+            --card-bg: #ffffff;         /* Pure white for content cards */
+            --text-main: #2c3e50;       /* Dark gray for main text */
+            --text-secondary: #5d6d7e;  /* Lighter gray for secondary text */
+            --hero-gradient-start: #1e56a0;
+            --hero-gradient-end: #0d2f5e;
         }
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Inter', 'Montserrat', sans-serif;
-            font-size: 1.15rem; /* Slightly adjusted for reading on light bg */
-            background-color: var(--light-red-bg);
+            font-size: 1.1rem;
+            background-color: var(--light-blue-bg);
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.6;
@@ -33,80 +34,110 @@
             font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 0;
-            color: var(--primary-red);
+            color: #ffffff;
             letter-spacing: -1px;
         }
 
         h2 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             text-align: center;
-            color: var(--primary-red);
-            margin-bottom: 30px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
             position: relative;
             display: inline-block;
             width: 100%;
         }
-        
+
         /* Add a subtle decorative line under H2 */
         h2::after {
             content: '';
             display: block;
             width: 60px;
             height: 4px;
-            background-color: var(--accent-red);
-            margin: 10px auto 0;
+            background-color: var(--accent-blue);
+            margin: 6px auto 0;
             border-radius: 2px;
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             text-align: left;
-            color: var(--accent-red);
-            border-left: 4px solid var(--primary-red);
+            color: var(--accent-blue);
+            border-left: 4px solid var(--primary-blue);
             padding-left: 15px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            margin-top: 25px;
+            margin-bottom: 12px;
         }
 
         /* Layout */
         header {
-            padding: 140px 20px 60px;
+            padding: 96px 30px;
+            padding-top: 80px;
+            margin-top: 60px;
             text-align: center;
             position: relative;
-            background: linear-gradient(180deg, rgba(140, 27, 27, 0.05) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(rgba(16, 75, 235, 0.85), rgba(15, 23, 42, 0.9)), url('image/RSS2026-logo.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #1e56a0;
+            color: #ffffff;
         }
 
-        /* SVG Logo Styling */
-        header svg.logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 20px;
-            fill: var(--primary-red);
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
+        header .hero-subtitle {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: rgba(226, 232, 240, 0.95);
+            margin-bottom: 32px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        header .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+        }
+
+        header .hero-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
         header p {
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.85);
             font-weight: 500;
         }
 
         section {
             max-width: 1100px;
-            margin: 40px auto;
-            padding: 50px;
+            margin: 20px auto;
+            padding: 35px 50px;
             background: var(--card-bg);
             border-radius: 8px;
-            /* Subtle red-tinted shadow */
-            box-shadow: 0 4px 20px rgba(140, 27, 27, 0.08); 
-            border: 1px solid rgba(140, 27, 27, 0.1);
+            box-shadow: 0 2px 15px rgba(30, 86, 160, 0.08);
+            border: 1px solid rgba(30, 86, 160, 0.08);
         }
 
         footer {
             text-align: center;
-            padding: 40px 20px;
-            background-color: var(--primary-red);
+            padding: 25px 20px;
+            background-color: var(--primary-blue);
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
-            margin-top: 60px;
+            margin-top: 30px;
         }
 
         /* Navigation */
@@ -115,7 +146,7 @@
             top: 0;
             width: 100%;
             padding: 15px 0;
-            background-color: var(--primary-red);
+            background-color: var(--primary-blue);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
             display: flex;
@@ -185,33 +216,33 @@
 
         /* Content Styles */
         p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         a.link-text {
-            color: var(--primary-red);
+            color: var(--primary-blue);
             text-decoration: underline;
             text-underline-offset: 3px;
         }
         a.link-text:hover {
-            color: var(--accent-red);
+            color: var(--accent-blue);
         }
 
         .submission-content ul {
-            list-style-type: none; 
+            list-style-type: none;
             padding-left: 10px;
         }
-        
+
         .submission-content li {
             position: relative;
             padding-left: 25px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: var(--text-main);
         }
-        
+
         .submission-content li::before {
             content: "•";
-            color: var(--primary-red);
+            color: var(--primary-blue);
             font-weight: bold;
             font-size: 1.2em;
             position: absolute;
@@ -220,7 +251,11 @@
         }
 
         .submission-content strong {
-            color: var(--primary-red);
+            color: var(--primary-blue);
+        }
+
+        section strong {
+            color: var(--primary-blue);
         }
 
         /* People Grid */
@@ -254,7 +289,7 @@
             width: 180px;
             height: 180px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 8px;
             border: 3px solid #fff;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 15px;
@@ -263,7 +298,7 @@
         }
         
         .speaker a:hover img, .organizer a:hover img {
-            border-color: var(--primary-red);
+            border-color: var(--primary-blue);
         }
 
         .speaker p, .organizer p {
@@ -273,7 +308,7 @@
         }
         
         .speaker strong, .organizer strong {
-            color: var(--primary-red);
+            color: var(--primary-blue);
             font-size: 1.15rem;
             display: block;
             margin-bottom: 5px;
@@ -282,7 +317,7 @@
         .speaker-list {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 25px;
             margin-top: 20px;
         }
 
@@ -291,10 +326,10 @@
             gap: 25px;
             align-items: flex-start;
             padding: 20px;
-            border: 1px solid rgba(140, 27, 27, 0.1);
+            border: 1px solid rgba(30, 86, 160, 0.1);
             border-radius: 8px;
             background: #ffffff;
-            box-shadow: 0 2px 10px rgba(140, 27, 27, 0.06);
+            box-shadow: 0 2px 10px rgba(30, 86, 160, 0.06);
         }
 
         .speaker-photo {
@@ -320,7 +355,7 @@
         .speaker-name {
             font-size: 1.3rem;
             font-weight: 700;
-            color: var(--primary-red);
+            color: var(--primary-blue);
             margin-bottom: 6px;
         }
 
@@ -339,28 +374,27 @@
             display: inline-block;
             margin-top: 15px;
             padding: 12px 25px;
-            background-color: var(--primary-red);
+            background-color: var(--primary-blue);
             color: #fff;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(140, 27, 27, 0.2);
-            border: 1px solid var(--primary-red);
+            box-shadow: 0 4px 6px rgba(30, 86, 160, 0.2);
+            border: 1px solid var(--primary-blue);
         }
 
         .btn:hover {
-            background-color: #ffffff;
-            color: var(--primary-red);
+            background-color: var(--accent-blue);
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(140, 27, 27, 0.15);
+            box-shadow: 0 6px 12px rgba(30, 86, 160, 0.25);
         }
 
         .submission-portal {
             margin-top: 20px;
             padding: 12px 18px;
-            background-color: var(--accent-red);
+            background-color: var(--accent-blue);
             color: #ffffff;
             font-weight: 700;
             text-align: center;
@@ -372,8 +406,8 @@
             display: flex;
             gap: 60px;
             align-items: flex-start;
-            margin-top: 30px;
-            padding: 30px;
+            margin-top: 20px;
+            padding: 25px;
             background-color: #fcfcfc;
             border-radius: 8px;
             border: 1px solid #f0f0f0;
@@ -383,11 +417,96 @@
             flex: 1;
         }
 
+        /* Two-column Call for Papers layout */
+        .cfp-layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+
+        .cfp-main {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cfp-main h3:first-child {
+            margin-top: 0;
+        }
+
+        .cfp-sidebar {
+            flex: 0 0 280px;
+            position: sticky;
+            top: 90px;
+            padding: 24px 26px;
+            background-color: #fcfcfc;
+            border: 1px solid rgba(30, 86, 160, 0.15);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(30, 86, 160, 0.05);
+        }
+
+        .cfp-sidebar h3 {
+            border: none;
+            padding: 0;
+            margin: 0 0 18px;
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+        }
+
+        .cfp-sidebar .date-item {
+            margin-bottom: 18px;
+        }
+
+        .cfp-sidebar .date-item:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .cfp-sidebar .date-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .cfp-sidebar .date-value {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .cfp-sidebar .date-note {
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(30, 86, 160, 0.12);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .cfp-sidebar .btn-submit {
+            display: block;
+            margin-top: 22px;
+            padding: 12px 18px;
+            background-color: var(--primary-blue);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(30, 86, 160, 0.2);
+        }
+
+        .cfp-sidebar .btn-submit:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-1px);
+        }
         .timeline {
             position: relative;
             padding: 10px 0 10px 20px;
             min-width: 260px;
-            border-left: 2px solid rgba(140, 27, 27, 0.2);
+            border-left: 2px solid rgba(30, 86, 160, 0.2);
         }
 
         .timeline-item {
@@ -408,12 +527,12 @@
             height: 16px;
             border-radius: 50%;
             background: #ffffff;
-            border: 3px solid var(--primary-red);
+            border: 3px solid var(--primary-blue);
             transition: all 0.3s ease;
         }
 
         .timeline-item:hover .timeline-marker {
-            background: var(--primary-red);
+            background: var(--primary-blue);
             transform: scale(1.2);
         }
 
@@ -424,7 +543,7 @@
         .timeline-date {
             font-weight: 700;
             font-size: 1rem;
-            color: var(--primary-red);
+            color: var(--primary-blue);
             margin-bottom: 4px;
         }
 
@@ -436,45 +555,72 @@
         .schedule-meta {
             text-align: center;
             color: var(--text-secondary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
         }
 
         .schedule-table {
             width: 100%;
+            max-width: 800px;
+            margin: 25px auto 0;
             border-collapse: collapse;
-            margin-top: 20px;
         }
 
-        .schedule-table th,
+        .schedule-table thead {
+            display: none;
+        }
+
         .schedule-table td {
-            border: 1px solid rgba(140, 27, 27, 0.2);
-            padding: 18px 16px;
+            border-bottom: 1px solid rgba(30, 86, 160, 0.1);
+            padding: 14px 20px;
             text-align: left;
         }
 
-        .schedule-table th:first-child,
-        .schedule-table td:first-child {
-            width: 28%;
+        .schedule-table tr:last-child td {
+            border-bottom: none;
         }
-        
+
+        .schedule-table td:first-child {
+            width: 140px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .schedule-table td:last-child {
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
         /* Contact Section */
         #contact {
             text-align: center;
         }
-        
+
         #contact a {
-            color: var(--primary-red);
+            color: var(--primary-blue);
             font-weight: bold;
             text-decoration: none;
-            border-bottom: 1px dotted var(--primary-red);
+            border-bottom: 1px dotted var(--primary-blue);
         }
 
         /* Media Queries */
         @media(max-width: 768px) {
-            h1 { font-size: 2.5rem; }
+            header {
+                padding: 64px 24px;
+            }
+
+            header h1 {
+                font-size: 2.25rem;
+            }
+
+            header .hero-subtitle {
+                font-size: 1.5rem;
+            }
+
             h2 { font-size: 1.8rem; }
-            
+
             nav .nav-container {
                 flex-direction: column;
                 align-items: flex-start;
@@ -503,7 +649,7 @@
             nav .nav-links.active {
                 display: flex;
             }
-            
+
             section {
                 padding: 30px 20px;
                 margin: 20px;
@@ -515,9 +661,21 @@
                 padding: 20px;
             }
 
+            .cfp-layout {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .cfp-sidebar {
+                position: static;
+                flex: 1 1 auto;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
             .timeline {
                 min-width: auto;
-                border-left: 2px solid rgba(140, 27, 27, 0.2);
+                border-left: 2px solid rgba(30, 86, 160, 0.2);
                 margin-top: 0;
             }
 
@@ -552,14 +710,13 @@
     </nav>
 
     <header>
-        <img src="image/rss.png" alt="RSS Logo" class="logo" style="width:752px; height:249px;">
-        <h1>
-            Data-Centric Robotics
-        </h1>
-        <h1 style="font-size: 2rem; font-weight: 400; color: var(--text-secondary); margin-top: 10px;">
-            What Data Do Robots Really Need?
-        </h1>
-        <p style="font-size: 1.5rem; margin-top: 20px; color: var(--primary-red); font-weight: 700;">RSS 2026 Workshop</p>
+        <h1>Data-Centric Robotics</h1>
+        <p class="hero-subtitle">What Data Do Robots Really Need?</p>
+        <div class="hero-meta">
+            <span class="hero-badge">RSS 2026 Workshop</span>
+            <span class="hero-badge">Sydney, Australia</span>
+            <span class="hero-badge">July 17, 2026</span>
+        </div>
     </header>
 
     <section id="overview" class="overview">
@@ -573,10 +730,10 @@
             Robots”—a shared, scalable ecosystem of data, tooling, and evaluation that can reliably support
             general-purpose physical intelligence.
         </p>
-        <p style="margin-top: 15px;">
+        <p style=”margin-top: 15px;”>
             This workshop will bring together researchers and practitioners to examine a core question: <strong>What kinds
             of data matter most for training robots, and at what scale is data “enough”?</strong> We will focus on the
-            end-to-end pipeline—data sources, collection paradigms, scaling laws, dataset composition, curation and
+            key aspects of robot data—data sources, collection paradigms, scaling laws, dataset composition, curation and
             weighting, evaluation protocols, and post-deployment data flywheels—highlighting both complementary
             perspectives and unresolved tensions. The workshop is designed to be highly discussion-driven, using short
             talks and panels to identify practical bottlenecks and propose actionable research directions.
@@ -585,89 +742,104 @@
 
     <section id="callforpapers">
         <h2>Call for Papers</h2>
-        <div class="submission-content">
+        <div class="cfp-layout">
+            <div class="cfp-main submission-content">
             <h3>Topics of Interest</h3>
-            <p>We welcome submissions related to the following themes:</p>
+            <p>We welcome topics related but not limited to:</p>
             <ul>
-                <li><strong>Data Sources and Philosophies:</strong> Web data (semantic knowledge) vs. Simulation data
-                    (scalable) vs. Real-world interaction data (grounding). Combining diverse data sources in unified
-                    pipelines.</li>
-                <li><strong>Scalability vs. Quality in Data Collection:</strong> Balancing high-fidelity teleoperation
-                    with scalable alternatives like human videos or low-cost wearable devices. Weighting data sources
-                    during training.</li>
-                <li><strong>Closing the Loop - Learning After Deployment:</strong> Leveraging experiential data,
-                    reinforcement learning, and online adaptation to correct failures and build robust data flywheels
-                    post-deployment.</li>
-                <li><strong>Data Evaluation, Analysis, and Interpretability:</strong> Defining and measuring data quality.
-                    Systematic selection, filtering, and weighting of data. Benchmarks for data curation and
-                    understanding data influence on model behavior.</li>
+                <li><strong>Data Sources and Philosophies:</strong> Web data offers semantic knowledge,
+                    simulation offers scale, and real-world interaction offers grounding. How do these sources
+                    complement or conflict, and how do we combine them?</li>
+                <li><strong>Scalability vs. Quality in Data Collection:</strong> Teleoperation gives
+                    high-fidelity demonstrations but is hard to scale; human videos and wearable devices are abundant
+                    but lack explicit action labels. How do we balance scale and fidelity, and weight sources?</li>
+                <li><strong>Closing the Loop—Learning After Deployment:</strong> Can a deployed robot learn
+                    from its own experience to correct failures? We explore RL, online adaptation, and data
+                    flywheels for continuous improvement.</li>
+                <li><strong>Data Evaluation, Analysis, and Interpretability:</strong> What makes a “good”
+                    training example, and how do we select, filter, or weight data? We seek benchmarks and
+                    tools that reveal how data shapes model behavior.</li>
             </ul>
 
             <h3>Submission Guidelines</h3>
             <ul>
-                <li>All papers must be submitted through our <a href="#" class="link-text">OpenReview portal (Link TBD)</a>.</li>
-                <li>To facilitate double-blind review, all manuscripts must be fully anonymized.</li>
-                <li>All accepted papers are expected to be presented in person at the workshop.</li>
-                <li>Exceptional submissions will be considered for Best Paper Award and Spotlight Presentations.</li>
+                <li><strong>Submission portal:</strong> all papers must be submitted through our <a href="https://openreview.net/group?id=roboticsfoundation.org/RSS/2026/Workshop/RoboData" class="link-text" target="_blank" rel="noopener">OpenReview portal</a>.</li>
+                <li><strong>Page limit:</strong> there is no strict page limit, but we recommend 4–8 pages, excluding references and appendix.</li>
+                <li><strong>Format:</strong> submissions must follow the official <a href="https://roboticsconference.org/information/cfp/" class="link-text" target="_blank" rel="noopener">RSS paper template and style</a>, and must be properly anonymized for double-blind review.</li>
+                <li><strong>Dual submission policy:</strong> we welcome work that is previously unpublished, currently under review elsewhere, or recently published. Accepted papers will be listed on the workshop website but are <strong>non-archival</strong> and will not appear in formal proceedings.</li>
             </ul>
 
-            <h3>Submission Track</h3>
-            <div class="track-container">
-                <div class="track-content">
-                    <p>
-                        We welcome submissions spanning full papers, works-in-progress, open datasets, technical
-                        reports, recent work, and position papers, including novel methods, systems, datasets,
-                        evaluations, and perspectives that advance data-centric robotics.
-                    </p>
-                    <div class="submission-portal">Submission Portal</div>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">June 17, 2026</div>
-                            <div class="timeline-label">Submission Deadline</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">June 23, 2026</div>
-                            <div class="timeline-label">Notification of Acceptance</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">July 5, 2026</div>
-                            <div class="timeline-label">Camera-ready Papers Due</div>
-                        </div>
-                    </div>
-                </div>
+            <h3>Presentation & Awards</h3>
+            <p>
+                All accepted papers will be presented at an in-person poster session. A small number
+                of selected papers will additionally give a 5-minute spotlight talk. We will also
+                recognize outstanding work with a <strong>Best Paper Award</strong>, announced during the closing
+                remarks. Camera-ready versions of all accepted papers will be made available on the workshop website.
+            </p>
             </div>
+
+            <aside class="cfp-sidebar">
+                <h3>Important Dates</h3>
+                <div class="date-item">
+                    <div class="date-label">Submission Deadline</div>
+                    <div class="date-value">June 20, 2026</div>
+                </div>
+                <div class="date-item">
+                    <div class="date-label">Notification</div>
+                    <div class="date-value">June 27, 2026</div>
+                </div>
+                <div class="date-item">
+                    <div class="date-label">Workshop Date</div>
+                    <div class="date-value">July 17, 2026</div>
+                </div>
+                <p class="date-note">All deadlines are <strong>Anywhere on Earth (AoE)</strong> time. Workshop is a half-day morning session.</p>
+                <a class="btn-submit" href="https://openreview.net/group?id=roboticsfoundation.org/RSS/2026/Workshop/RoboData" target="_blank" rel="noopener">Submit via OpenReview</a>
+            </aside>
         </div>
     </section>
 
     <section id="schedule">
-        <h2>Schedule</h2>
-        <p class="schedule-meta">Location: To be decided</p>
-        <p class="schedule-meta">Date: July 13th - July 17th</p>
+        <h2>Workshop Schedule (Tentative)</h2>
+        <p class="schedule-meta">Location: University of Technology Sydney, Sydney, Australia</p>
+        <p class="schedule-meta">Date: Friday, July 17, 2026 (Morning Session)</p>
         <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Event</th>
-                </tr>
-            </thead>
             <tbody>
-                <tr><td></td><td></td></tr>
-                <tr><td></td><td></td></tr>
-                <tr><td></td><td></td></tr>
-                <tr><td></td><td></td></tr>
-                <tr><td></td><td></td></tr>
-                <tr><td></td><td></td></tr>
-                <tr><td></td><td></td></tr>
-                <tr><td></td><td></td></tr>
+                <tr>
+                    <td>9:00 - 9:05</td>
+                    <td>Opening Remarks</td>
+                </tr>
+                <tr>
+                    <td>9:05 - 9:35</td>
+                    <td>Invited Talk 1: Hao Su</td>
+                </tr>
+                <tr>
+                    <td>9:35 - 10:05</td>
+                    <td>Invited Talk 2: Ashwin Balakrishna</td>
+                </tr>
+                <tr>
+                    <td>10:05 - 10:35</td>
+                    <td>Coffee Break and Poster Session</td>
+                </tr>
+                <tr>
+                    <td>10:35 - 11:05</td>
+                    <td>Invited Talk 3: Haozhi Qi</td>
+                </tr>
+                <tr>
+                    <td>11:05 - 11:35</td>
+                    <td>Invited Talk 4: Simar Kareer</td>
+                </tr>
+                <tr>
+                    <td>11:35 - 11:50</td>
+                    <td>Spotlight Talks</td>
+                </tr>
+                <tr>
+                    <td>11:50 - 12:20</td>
+                    <td>Panel Discussion</td>
+                </tr>
+                <tr>
+                    <td>12:20 - 12:25</td>
+                    <td>Closing Remarks</td>
+                </tr>
             </tbody>
         </table>
     </section>
@@ -682,7 +854,17 @@
                 <div class="speaker-info">
                     <div class="speaker-name">Hao Su</div>
                     <div class="speaker-org">Fudan University</div>
-                    <!-- <p class="speaker-bio"></p> -->
+                    <p class="speaker-bio">Hao Su is "Haoqing" Distinguished Professor at Fudan University and Inaugural Dean of the Fudan Institute of General Physical Intelligence. His research spans perception, 3D understanding, and embodied control, with foundational contributions including ImageNet, ShapeNet, PointNet, and the ManiSkill benchmark. He is a recipient of the IEEE PAMI Young Researcher Award, NSF CAREER Award, and serves as Program Committee Co-Chair of CVPR 2025. He holds a Ph.D. in Computer Science from Stanford and a Ph.D. in Mathematics from Beihang University.</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <a class="speaker-photo" href="https://abalakrishna123.github.io/" target="_blank" rel="noopener">
+                    <img src="image/ashwin.jpg" alt="Ashwin Balakrishna">
+                </a>
+                <div class="speaker-info">
+                    <div class="speaker-name">Ashwin Balakrishna</div>
+                    <div class="speaker-org">Physical Intelligence</div>
+                    <p class="speaker-bio">Ashwin Balakrishna is a Researcher at Physical Intelligence working on building scalable robot data collection and evaluation pipelines for large-scale robot learning. Previously, he was a Senior Research Scientist at Google Deepmind on the Gemini Robotics team where he worked on VLA post-training and improving instruction following capabilities. He did his PhD in Computer Science in the AUTOLAB at UC Berkeley and completed his bachelor's degree at Caltech in Electrical Engineering.</p>
                 </div>
             </div>
             <div class="speaker-card">
@@ -702,17 +884,7 @@
                 <div class="speaker-info">
                     <div class="speaker-name">Simar Kareer</div>
                     <div class="speaker-org">Georgia Tech</div>
-                    <!-- <p class="speaker-bio"></p> -->
-                </div>
-            </div>
-            <div class="speaker-card">
-                <a class="speaker-photo" href="https://abalakrishna123.github.io/" target="_blank" rel="noopener">
-                    <img src="image/ashwin.jpg" alt="Ashwin Balakrishna">
-                </a>
-                <div class="speaker-info">
-                    <div class="speaker-name">Ashwin Balakrishna</div>
-                    <div class="speaker-org">Google Deepmind</div>
-                    <!-- <p class="speaker-bio"></p> -->
+                    <p class="speaker-bio">Simar Kareer is a PhD student at Georgia Tech advised by Judy Hoffman and Danfei Xu, focusing on building algorithms and systems that enable robots to learn from vast real-world datasets. His recent work explores teaching robots from egocentric human experience. Previously, he interned at Physical Intelligence and completed his undergraduate degree at Georgia Tech, where he worked with Dhruv Batra.</p>
                 </div>
             </div>
         </div>
