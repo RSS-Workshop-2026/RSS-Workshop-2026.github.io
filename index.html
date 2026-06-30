@@ -605,6 +605,40 @@
             border-bottom: 1px dotted var(--primary-blue);
         }
 
+        /* Sponsor */
+        #sponsor {
+            text-align: center;
+        }
+
+        #sponsor .sponsor-text {
+            max-width: 720px;
+            margin: 18px auto 30px;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        #sponsor .sponsor-text a {
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        #sponsor .sponsor-text a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        #sponsor .sponsor-logo img {
+            max-width: 560px;
+            width: 90%;
+            height: auto;
+            transition: transform 0.2s ease;
+        }
+
+        #sponsor .sponsor-logo img:hover {
+            transform: scale(1.03);
+        }
+
         /* Media Queries */
         @media(max-width: 768px) {
             header {
@@ -704,6 +738,7 @@
                 <a href="#schedule">Schedule</a>
                 <a href="#speakers">Speakers</a>
                 <a href="#organizers">Organizers</a>
+                <a href="#sponsor">Sponsor</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -944,6 +979,14 @@ He has received the IEEE PAMI Young Researcher Award, NSF CAREER Award, ACM SIGG
     <section id="contact">
         <h2>Contact Us</h2>
         <p style="text-align:center; margin-top:20px;">Contact us at: <a href="mailto:rssworkshop2026-official@outlook.com">rssworkshop2026-official@outlook.com</a></p>
+    </section>
+
+    <section id="sponsor">
+        <h2>Sponsor</h2>
+        <p class="sponsor-text">We gratefully acknowledge <a href="https://www.spirit-ai.com/en/" target="_blank" rel="noopener">Spirit AI</a> for their support of this workshop.</p>
+        <a class="sponsor-logo" href="https://www.spirit-ai.com/en/" target="_blank" rel="noopener">
+            <img src="image/spirit.png" alt="Spirit AI">
+        </a>
     </section>
 
     <footer>
